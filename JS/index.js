@@ -42,6 +42,19 @@ function agregarIndumentaria(seleccionado) {
     }
 }
 
+function opcionContinuar() {
+    let opcion = prompt("Desea continuar su compra?\n1. Seguir Comprando\n2. Finalizar");
+            if (opcion === "1") {
+                alert("Continuar con la compra...");
+                compraIndumentaria();
+            } else if (opcion === "2") {
+                alert("¡Gracias por tu visita!");
+            } else {
+                alert("Opción no válida. Por favor, elige 1 o 2.");
+                let opcion = prompt("¿Qué deseas hacer?\n1. Seguir Comprando\n2. Finalizar");
+            }
+}
+
 function mostrarCompras() {
     if(compras.length !== 0){
         let comprasConcatenadas = 'Los productos en tu carrito son: ';
@@ -61,32 +74,8 @@ function mostrarCompras() {
 
         alert(comprasConcatenadas);
         alert("El monto de su compra es $" + monto.toLocaleString('es-AR'));
-        let opcion = prompt("Desea continuar su compra?\n1. Seguir Comprando\n2. Finalizar");
-            if (opcion === "1") {
-                alert("Continuar con la compra...");
-                compraIndumentaria();
-            } else if (opcion === "2") {
-                alert("¡Gracias por tu visita!");
-            } else {
-                alert("Opción no válida. Por favor, elige 1 o 2.");
-                let opcion = prompt("¿Qué deseas hacer?\n1. Seguir Comprando\n2. Finalizar");
-            }
+        opcionContinuar();
     } else {
-        let opcion = prompt("Desea continuar su compra?\n1. Seguir Comprando\n2. Finalizar");
-            if (opcion === "1") {
-                alert("Continuar con la compra...");
-                compraIndumentaria();
-            } else if (opcion === "2") {
-                alert("¡Gracias por tu visita!");
-            } else {
-                alert("Opción no válida. Por favor, elige 1 o 2.");
-                let opcion = prompt("Desea continuar su compra?\n1. Seguir Comprando\n2. Finalizar");
-            }
+        opcionContinuar();
     }
 }
-
-
-
-//si queres crear una un mensaje de volver a comprar despues de mostrar el monto crear un mensaje con 
-//opcion 1 volver a comprar opcion 2 salir crear un mensaje concatenando con /n las dos opciones y hacer un if
-// si el numero es opcion uno llamar al metodo agregarIndumentaria si es igual a dos mostrar mensaje gracias por su compra
