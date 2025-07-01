@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="carrito.css">
 </head>
 <body>
     <header>
@@ -20,11 +20,16 @@
 
     </header>
     <main>
+        <p id="vacio" class="escondido">CARRITO VACIO <br> <a href="./index.html">Agregar al Carrito</a></p>
         <section id="producto-disponible"></section>
+        <section id="totales">
+            <p>Unidades: <span id="unidades">0</span></p>
+            <p>Precio: $ <span id="precio">0</span></p>
+            <button disabled>Comprar</button>
+            <button id="reiniciar">Reiniciar</button>
+        </section>
     </main>
-    <footer></footer>    
-    <script src="./js/indumentaria.js"></script>
-    <script src="./js/index.js"></script>
+    <footer></footer>     
     <script src="./js/Acumulo.js"></script>
     <script src="./js/Carrito.js"></script>
 </body>

@@ -1,0 +1,31 @@
+#producto-disponible{
+    width: 500px;
+    margin: auto;
+}
+
+.indumentaria-disponible-carro{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.indumentaria-disponible-carro img {
+    height: 100px;
+    aspect-ratio: 1.5;
+}
+
+.indumentaria-disponible-carro h3 {
+    width: 100px;
+    font-size: 15px;
+}
+.indumentaria-disponible-carro p {
+    width: 50px;
+    font-size: 15px;
+}
+
+#totales, #vacio {
+    text-align: center;
+}
+.escondido {
+    display: none;
+}
