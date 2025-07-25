@@ -4,6 +4,9 @@ const precioElement = document.getElementById("precio");
 const carritoVacioElement = document.getElementById("vacio");
 const totalesElement = document.getElementById("totales");
 const reiniciarCarritoElement = document.getElementById("reiniciar");
+const comprarCarrito = document.getElementById("comprar");
+const formularioCompra =document.getElementById("formularioCompra");
+formularioCompra.style.display = "none";
 
 function crearProducto(){
     contenedorIndumentaria.innerHTML = ""
@@ -66,15 +69,42 @@ function revisarVacio(){
     carritoVacioElement.classList.toggle("escondido",productos && productos.length>0);
     totalesElement.classList.toggle("escondido",!(productos && productos.length>0));
 }
+
+
+   
 revisarVacio();
 
+
 reiniciarCarritoElement.addEventListener("click",reiniciarCarrito);
+comprarCarrito.addEventListener("click", finalizarCompra);
+
 function reiniciarCarrito(){
     localStorage.removeItem("tiendaAlbinegra");
     crearProducto();
     revisarVacio();
     actualizarTotales();
     actualizarNumeroCarrito();
+    formularioCompra.style.display = "none";
 }
 
+function finalizarCompra(){
+    formularioCompra.style.display = "block";
+}
+
+document.getElementById("formularioCompra").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe
+    formularioCompra.style.display = "none";
+    reiniciarCarrito();
+    mostrarAlerta();
+});
+
+
+    function mostrarAlerta() {
+      Swal.fire({
+        title: '¡Hola!',
+        text: 'Gracias por comprar la pasión Albinegra',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+      });
+    }
 

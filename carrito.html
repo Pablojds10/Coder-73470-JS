@@ -6,14 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carrito.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
         <nav>
             <a href="./index.html"><img src="/img/BYN.png" id="logo" alt="Logo"></a>
-            <div>
+            <div class="headerDiv">
                 <a href="./index.html">Inicio</a>
-                <a href="#">Ofertas</a>
+                <a href="./comentarios.html">Comentarios</a>
                 <a href="./carrito.html" id="carro"><img src="/img/carrito-de-compras.png" alt="Carrito de Compras"><span id="acumulado-carrito">0</span></a>
             </div>
         </nav>
@@ -25,9 +26,26 @@
         <section id="totales">
             <p>Unidades: <span id="unidades">0</span></p>
             <p>Precio: $ <span id="precio">0</span></p>
-            <button disabled>Comprar</button>
+            <button  id="comprar">Comprar</button>
             <button id="reiniciar">Reiniciar</button>
         </section>
+
+       <div class="formularioCompraForm">
+            <form action="" method="post" id="formularioCompra"> 
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+
+
+    
+       
     </main>
     <footer></footer>     
     <script src="./js/Acumulo.js"></script>

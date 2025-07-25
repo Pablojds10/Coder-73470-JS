@@ -32,7 +32,7 @@ header nav{
     margin: 0 60px;
 }
 
-header nav div{
+header nav .haderDiv{
     display: flex;
     align-items: center;
     gap: 30px;

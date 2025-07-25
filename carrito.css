@@ -29,3 +29,23 @@
 .escondido {
     display: none;
 }
+.formularioCompraForm {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    height: 50vh;             
+    background-color: #f9f9f9; 
+}
+
+form {
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(77, 75, 75);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+
+#mensajeCompra{
+    text-align: center;
+}
